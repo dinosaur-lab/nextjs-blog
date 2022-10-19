@@ -1,0 +1,149 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-width:960px;
+    padding: 0 4%;
+    text-align: center;
+    margin:auto auto 100px auto;
+}
+
+body {
+    background-color: aliceblue;
+    color: black;
+    font-size: 0.9rem;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
+}
+
+#header {
+    align-items:center;
+    text-align: center;
+    margin:auto auto 80px 0;
+}
+
+#header-content {
+    justify-content: center;
+    align-items:center;
+    margin:auto auto 80px 0;
+}
+
+#header nav {
+    margin:30px 30px 30px 0;
+}
+
+#header li {
+    margin:30px 30px 80px 0;
+}
+
+#header li:hover {
+    opacity: 0.3;
+    color: white;
+}
+
+#header li a {
+    color: black;
+}
+
+#header h1 {
+    background-color: #008080;
+}
+
+#mainvisual {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin:120px auto 120px 0;
+}
+
+.section-title {
+    display: inline-block;
+    margin-bottom: 60px;
+    border-bottom: solid 1px black;
+}
+
+#profile img {
+    margin-right: 30px;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin:0 auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin:10px auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.content-title {
+    margin: 10px 0;
+}
+
+.trip {
+    text-align: center;
+    margin:10px auto;
+}
+
+.programming {
+    text-align: center;
+    margin:10px auto;
+}
+
+.life {
+    text-align: center;
+    margin:10px auto;
+}
+
+footer {
+    font-size: 0.5rem;
+    padding:10px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+section {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    overflow: hidden;
+    margin:10px;
+}
+
+.programming:hover img{
+    opacity: 0.7;
+}
+
+.trip:hover img{
+    opacity: 0.7;
+}
+
+.life:hover img{
+    opacity: 0.7;
+}
+
