@@ -17,10 +17,10 @@ import CoffeeIcon from '@mui/icons-material/Coffee';
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#191291",
+            main: "#303030",
         },
         secondary: {
-            main: purple[500],
+            main: "#e040fb",
         },
     },
 });
@@ -28,7 +28,6 @@ const theme = createTheme({
 const pages = [
     { page_id: 'Home', page_name: "/" },
     { page_id: 'About', page_name: "/about" },
-    { page_id: 'Contect', page_name: "/" }
 ];
 
 const ResponsiveAppBar = () => {
