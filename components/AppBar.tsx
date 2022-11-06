@@ -20,7 +20,7 @@ const theme = createTheme({
             main: "#303030",
         },
         secondary: {
-            main: purple[500],
+            main: "#e040fb",
         },
     },
 });
