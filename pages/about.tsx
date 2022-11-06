@@ -1,10 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout'
-import ResponsiveAppBar from "../components/AppBar";
 
 export default function About() {
     return (

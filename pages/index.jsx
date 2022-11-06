@@ -5,8 +5,6 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link';
-import ResponsiveAppBar from "../components/AppBar";
-import MediaCard from "../components/card";
 import Date from '../components/date'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -27,7 +25,7 @@ export default function Home({ allPostsData }) {
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
-                <Link href={`/posts/${id}`}>{title}</Link>
+                <Link href={`/posts/${id}`} color="primary" underline="hover">{title}</Link>
                 <br />
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />
