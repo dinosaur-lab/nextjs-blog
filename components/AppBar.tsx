@@ -27,7 +27,7 @@ const theme = createTheme({
 
 const pages = [
     { page_id: 'Home', page_name: "/" },
-    { page_id: 'About', page_name: "/about" },
+    { page_id: 'About', page_name: "/about" }
 ];
 
 const ResponsiveAppBar = () => {

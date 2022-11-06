@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css';
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import ResponsiveAppBar from "../components/AppBar";
+import Breadcrumbs from "../components/Breadcrumbs";
+import * as React from 'react';
+import Typography from '@mui/material/Typography';
 
-const name = 'Yu Yoshitani';
 export const siteTitle = 'Haru TechLab';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,6 +20,9 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         <ResponsiveAppBar />
       </header>
+      <div>
+        <Breadcrumbs />
+      </div>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <a>
