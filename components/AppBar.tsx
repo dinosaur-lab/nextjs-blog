@@ -15,6 +15,7 @@ import CoffeeIcon from '@mui/icons-material/Coffee';
 
 const pages = [
     { page_id: 'Home', page_name: "/" },
+    { page_id: 'Blog', page_name: "/blog" },
     { page_id: 'About', page_name: "/about" }
 ];
 
