@@ -11,8 +11,14 @@ export default function Blog({ allPostsData }) {
     {
         return (
             <Layout home>
-                <section>
-                    <h2 className={utilStyles.headingLg}>New posts</h2>
+                <h1 className={styles.title}>
+                    Blog
+                </h1>
+                <p className={styles.description}>
+                    技術、生活について
+                </p>
+                <h2 className={utilStyles.headingLg}>New posts</h2>
+                <div className={styles.grid}>
                     <ul className={utilStyles.list}>
                         {allPostsData.map(({ id, date, title }) => (
                             <li className={utilStyles.listItem} key={id}>
@@ -24,7 +30,7 @@ export default function Blog({ allPostsData }) {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </div>
             </Layout>
         )
     }

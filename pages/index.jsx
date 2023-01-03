@@ -13,37 +13,37 @@ export default function Home({ allPostsData }) {
   {
     return (
       <Layout home>
-        <section style={{ padding: 180 }}>
-          <h1 className={styles.title}>Welcome to my blog!</h1>
-        </section>
-        <section>
-          <h2 className={utilStyles.headingLg}>このブログについて</h2>
-          <div style={{ position: 'relative', width: '100%', height: 300 }}>
-            <Image src="/images/home.jpg" alt="home" layout="fill" objectFit="contain" />
+        <section style={{ width: '100%', height: 'auto' }}>
+          <div className={styles.top_image}>
+            <Image src="/images/home.jpg" width='1600px' height='600px' alt="home" />
+            <p className={styles.title_p}>Welcome to my blog!</p>
           </div>
+        </section>
+        <section className={styles.section}>
+          <h2 className={utilStyles.headingLg}>このブログについて</h2>
           <div className={styles.grid}>
-            <Image src="/images/icon.png" alt="Icon" width={100} height={100}></Image>
+            <div className={styles.icon}>
+              <Image src="/images/icon.png" alt="Icon" width={100} height={100}></Image>
+            </div>
             <p>
               のほほんとした日常を吐き出す場所<br />
-              SIerでフロントエンド、バックエンドを勉強中。<br />
-              学生時代は主にPython、AWS、Dockerを用いて開発を行っていました。<br />
-              当ブログには、趣味や学んだことを趣味や学んだことをはき出して行こうと思います。<br />
+              フロントエンド、バックエンドを勉強中。<br />
+              技術スタック：Python、AWS、Dockerなどなど<br />
+              当ブログには、趣味や学んだことをはき出して行こうと思います。<br />
             </p>
           </div>
-          <div>
-            <h2 className={utilStyles.headingLg}>New posts</h2>
-            <ul className={utilStyles.list}>
-              {allPostsData.map(({ id, date, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`} color="primary" underline="hover">{title}</Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h2 className={utilStyles.headingLg}>New posts</h2>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+                <Link href={`/posts/${id}`} color="primary" underline="hover">{title}</Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
+              </li>
+            ))}
+          </ul>
         </section>
       </Layout>
     )
