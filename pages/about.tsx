@@ -7,15 +7,13 @@ export default function About() {
             <h1 className={styles.title}>
                 About me
             </h1>
-
             <p className={styles.description}>
                 こんにちは
             </p>
-
             <div className={styles.grid}>
                 <p>
-                    新卒としてフロントエンド、バックエンドを勉強中。<br />
-                    学生時代は主にPython、AWS、Dockerを用いて開発を行っていました。<br />
+                    フロントエンド、バックエンドを勉強中。<br />
+                    技術スタック：Python、AWS、Dockerなどなど。<br />
                     当ブログには、趣味や学んだことを趣味や学んだことをはき出して行こうと思います。<br />
                 </p>
             </div>
