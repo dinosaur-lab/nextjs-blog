@@ -7,7 +7,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link';
 import Date from '../components/date'
 import { getSortedPostsData } from '../lib/posts'
-import { style } from '@mui/system';
+import Button from '@mui/material/Button';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -53,12 +53,12 @@ export default function Home({ allPostsData }) {
           <div className={styles.div}>
             <h2 className={utilStyles.headingLg}>Contact</h2>
             <div>
-              <Link href="https://twitter.com/HaruTechlab">
-                <TwitterIcon className={styles.contact_icon} />
-              </Link>
-              <Link href="https://github.com/dinosaur-lab">
-                <GitHubIcon className={styles.contact_icon} />
-              </Link>
+              <Button color="primary" aria-label="twitter" href="https://twitter.com/HaruTechlab" className={styles.contact_icon}>
+                <TwitterIcon />
+              </Button>
+              <Button color="primary" aria-label="github" href="https://github.com/dinosaur-lab" className={styles.contact_icon}>
+                <GitHubIcon />
+              </Button>
             </div>
           </div>
         </section>
