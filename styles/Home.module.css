@@ -3,12 +3,13 @@
 }
 
 .main {
+  margin: 4rem 0rem;
   min-height: 100vh;
   padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .footer {
@@ -72,8 +73,6 @@
 .grid {
   margin: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   max-width: 960px;
 }
@@ -138,7 +137,8 @@
 }
 
 .section {
-  margin: 5rem;
+  margin: 4rem 6rem;
+  text-align: left;
 }
 
 .contact_icon {
@@ -146,15 +146,21 @@
   font-size: 120px;
 }
 
-.div {
-  margin-top: 4rem;
-}
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+
+  .main {
+    margin: 1rem 1rem;
+  }
+
+  .section {
+    margin: 1rem 1rem;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {

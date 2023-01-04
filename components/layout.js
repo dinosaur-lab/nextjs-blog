@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 import Link from 'next/link'
 import ResponsiveAppBar from "../components/AppBar";
-import Breadcrumbs from "../components/Breadcrumbs";
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -32,9 +31,6 @@ export default function Layout({ children }) {
         <header className={styles.header}>
           <ResponsiveAppBar color="primary" />
         </header>
-        <div>
-          <Breadcrumbs />
-        </div>
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <a>
