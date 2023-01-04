@@ -141,6 +141,15 @@
   margin: 5rem;
 }
 
+.contact_icon {
+  padding: 1rem;
+  font-size: 80px;
+}
+
+.div {
+  margin-top: 4rem;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
