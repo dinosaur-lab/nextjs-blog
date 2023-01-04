@@ -47,7 +47,7 @@ export default function Home({ allPostsData }) {
                   <p>
                     のほほんとした日常を吐き出す場所<br />
                     フロントエンド、バックエンドを勉強中。<br />
-                    技術スタック：Python、AWS、Dockerなどなど<br />
+                    技術スタック: Python、AWS、Dockerなどなど<br />
                     当ブログには、趣味や学んだことをはき出して行こうと思います。<br />
                   </p>
                 </div>
