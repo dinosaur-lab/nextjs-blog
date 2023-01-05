@@ -24,6 +24,10 @@ export default function Home({ allPostsData }) {
       rootMargin: '-50px', // ref要素が現れてから50px過ぎたら
       triggerOnce: true, // 最初の一度だけ実行
     });
+    const [ref3, inView3] = useInView({
+      rootMargin: '-50px', // ref要素が現れてから50px過ぎたら
+      triggerOnce: true, // 最初の一度だけ実行
+    });
 
     return (
       <Layout home>
@@ -58,6 +62,45 @@ export default function Home({ allPostsData }) {
         <section className={styles.section}>
           <div ref={ref2} className={styles.div}>
             {inView2 && (
+              <div className="animate__animated animate__fadeInUp">
+                <h2 className={utilStyles.headingLg}>技術スタック</h2>
+                <div className={styles.grid}>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-python-60.png" alt="Icon" width={50} height={50}></Image>
+                    <p>Python</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-javascript-logo-50.png" alt="Icon" width={50} height={50}></Image>
+                    <p>Javascript</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-typescript-50.png" alt="Icon" width={50} height={50}></Image>
+                    <p>TypeScript</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-docker-50.png" alt="Icon" width={50} height={50}></Image>
+                    <p>Docker</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-gitlab-50.png" alt="Icon" width={50} height={50}></Image>
+                    <p>Gitlab</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/icons8-react-60.png" alt="Icon" width={50} height={50}></Image>
+                    <p>React</p>
+                  </div>
+                  <div className={styles.icon}>
+                    <Image src="/images/next-js.svg" alt="Icon" width={50} height={50}></Image>
+                    <p>Next.js</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div ref={ref3} className={styles.div}>
+            {inView3 && (
               <div className="animate__animated animate__fadeInUp">
                 <h2 className={utilStyles.headingLg}>New posts</h2>
                 <ul className={utilStyles.list}>
