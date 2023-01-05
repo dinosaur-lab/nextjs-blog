@@ -71,6 +71,7 @@
 
 .grid {
   margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   max-width: 960px;
@@ -78,6 +79,7 @@
 
 .icon {
   margin: 1rem;
+  padding: 1rem;
 }
 
 .card {
