@@ -1,7 +1,3 @@
-.breadcrumb {
-  padding: 2rem 2rem;
-}
-
 .main {
   min-height: 100vh;
   padding: 0;
@@ -77,14 +73,20 @@
   max-width: 960px;
 }
 
-.icon {
-  margin: 1rem;
+.techstack {
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.techstack_icon {
+  margin: 1rem;
 }
 
 .card {
-  margin: 1rem 1rem;
-  padding: 1rem 1rem;
+  margin: 1rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -133,7 +135,7 @@
   transform: translate(-50%, -50%);
   color: #FFF;
   font-weight: 600;
-  font-size: 80px;
+  font-size: 64px;
   mix-blend-mode: overlay;
 }
 
@@ -146,7 +148,6 @@
   padding: 1rem;
   font-size: 120px;
 }
-
 
 @media (max-width: 600px) {
   .grid {

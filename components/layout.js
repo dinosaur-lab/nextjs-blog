@@ -7,7 +7,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export const siteTitle = 'Haru TechLab';
+export const siteTitle = 'Yu TechLab';
 
 const theme = createTheme({
   palette: {
@@ -34,7 +34,7 @@ export default function Layout({ children }) {
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <a>
-            ©2022 HARU
+            ©2023 YU
           </a>
         </footer>
       </div>
