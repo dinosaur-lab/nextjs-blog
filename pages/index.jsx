@@ -17,17 +17,27 @@ import 'animate.css';
 export default function Home({ allPostsData }) {
   {
     const [ref, inView] = useInView({
-      rootMargin: '-50px', // ref要素が現れてから50px過ぎたら
-      triggerOnce: true, // 最初の一度だけ実行
+      rootMargin: '-50px',
+      triggerOnce: true,
     });
     const [ref2, inView2] = useInView({
-      rootMargin: '-50px', // ref要素が現れてから50px過ぎたら
-      triggerOnce: true, // 最初の一度だけ実行
+      rootMargin: '-50px',
+      triggerOnce: true,
     });
     const [ref3, inView3] = useInView({
-      rootMargin: '-50px', // ref要素が現れてから50px過ぎたら
-      triggerOnce: true, // 最初の一度だけ実行
+      rootMargin: '-50px',
+      triggerOnce: true,
     });
+
+    const stacks = [
+      { id: 'Python', path: '/images/icons8-python-60.png' },
+      { id: 'Javascript', path: '/images/icons8-javascript-logo-50.png' },
+      { id: 'TypeScript', path: '/images/icons8-typescript-50.png' },
+      { id: 'Docker', path: '/images/icons8-docker-50.png' },
+      { id: 'Gitlab', path: '/images/icons8-gitlab-50.png' },
+      { id: 'React', path: '/images/icons8-react-60.png' },
+      { id: 'Next.js', path: '/images/next-js.svg' }
+    ];
 
     return (
       <Layout home>
@@ -35,24 +45,28 @@ export default function Home({ allPostsData }) {
           <div className={styles.top_image} style={{
             backgroundImage: `url("/images/home.jpg")`
           }}>
-            <Image src="/images/home.jpg" width='1600px' height='800px' alt="home" />
-            <p className={styles.title_p}>Welcome to my blog!</p>
+            <Image
+              src="/images/home.jpg"
+              width='1600px'
+              height='800px'
+              alt="home"
+              blurDataURL="/images/loading_home.jpg"
+              placeholder="blur" />
+            <p className={styles.title_p}>Welcome to my homepage!</p>
           </div>
         </section>
         <section className={styles.section}>
           <div ref={ref} className={styles.div}>
             {inView && (
               <div className="animate__animated animate__fadeInUp">
-                <h2 className={utilStyles.headingLg}>このブログについて</h2>
+                <h2 className={utilStyles.headingLg}>このページについて</h2>
                 <div className={styles.grid}>
                   <div className={styles.icon}>
                     <Image src="/images/icon.png" alt="Icon" width={100} height={100}></Image>
                   </div>
                   <p>
-                    のほほんとした日常を吐き出す場所<br />
                     フロントエンド、バックエンドを勉強中。<br />
-                    技術スタック: Python、AWS、Dockerなどなど<br />
-                    当ブログには、趣味や学んだことをはき出して行こうと思います。<br />
+                    TypeScript Next.jsの練習として作成しました。<br />
                   </p>
                 </div>
               </div>
@@ -65,39 +79,17 @@ export default function Home({ allPostsData }) {
               <div className="animate__animated animate__fadeInUp">
                 <h2 className={utilStyles.headingLg}>技術スタック</h2>
                 <div className={styles.grid}>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-python-60.png" alt="Icon" width={50} height={50}></Image>
-                    <p>Python</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-javascript-logo-50.png" alt="Icon" width={50} height={50}></Image>
-                    <p>Javascript</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-typescript-50.png" alt="Icon" width={50} height={50}></Image>
-                    <p>TypeScript</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-docker-50.png" alt="Icon" width={50} height={50}></Image>
-                    <p>Docker</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-gitlab-50.png" alt="Icon" width={50} height={50}></Image>
-                    <p>Gitlab</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/icons8-react-60.png" alt="Icon" width={50} height={50}></Image>
-                    <p>React</p>
-                  </div>
-                  <div className={styles.icon}>
-                    <Image src="/images/next-js.svg" alt="Icon" width={50} height={50}></Image>
-                    <p>Next.js</p>
-                  </div>
+                  {stacks.map((stack) => (
+                    <div className={styles.techstack} key={stack.id}>
+                      <Image src={stack.path} alt="Icon" width={32} height={32}></Image>
+                      <p>{stack.id}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
           </div>
-        </section>
+        </section >
         <section className={styles.section}>
           <div ref={ref3} className={styles.div}>
             {inView3 && (
@@ -131,7 +123,7 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
         </section>
-      </Layout>
+      </Layout >
     )
   }
 }
